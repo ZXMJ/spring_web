@@ -1,0 +1,23 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<context-param>
+		<param-name>configLocation</param-name>
+		<param-value>application.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>comultra.web.listener.SpringContextListener</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>PersonServlet</servlet-name>
+		<display-name>PersonServlet</display-name>
+		<description></description>
+		<servlet-class>comultra.web.servlet.PersonServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PersonServlet</servlet-name>
+		<url-pattern>/personServlet</url-pattern>
+	</servlet-mapping>
+</web-app>
